@@ -13,7 +13,9 @@ const settingsBackColorInput = rootElement.querySelectorAll('.settings__back-col
 
 form.addEventListener('change',()=>{
     rootElement.style.fontFamily = `'${fontChangeSelect.value}','sans-serif'`;
-    rootElement.style.fontSize = fontSize.value + 'px';
+    if(6<=fontSize.value<=25){
+        rootElement.style.fontSize = fontSize.value + 'px';
+    }
     rootElement.style.color = colorInput.value;
     // console.log(fontSize.value)
     texts.forEach(TextManager);
